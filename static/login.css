@@ -1,0 +1,40 @@
+body {
+background-color: rgba(255, 255, 255, 1);
+
+
+}
+.image {
+width: 250px;
+height: 120px;
+
+}
+.title {
+    position: relative;
+left: 585px;
+top: 240px;
+width: 271px;
+height: 20px;
+color: rgba(16, 16, 16, 1);
+font-size: 14px;
+text-align: left;
+font-family: SourceHanSansSC-regular;
+
+}
+.input {
+width: 250px;
+height: 40px;
+line-height: 20px;
+text-align: center;
+border: 1px solid rgba(187, 187, 187, 1);
+
+}
+.label {
+width: 75px;
+height: 20px;
+color: rgba(16, 16, 16, 1);
+font-size: 14px;
+text-align: left;
+font-family: SourceHanSansSC-regular;
+
+}
+

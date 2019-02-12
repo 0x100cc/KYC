@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}</style>
+</head>
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+{% endblock %}
+<body>
+
+        <img src="/static/V SYSTEMS_Logo_Black.svg" class="image">
+        <p class="title">KYC SYSTEMS FOR AIRDROP AND BOUNTY</p>
+       <form action="/register/" method="post" >
+            {% if message %}
+                    <div class="alert alert-warning">{{ message }}</div>
+            {% endif %}
+            {% csrf_token %}
+
+            <label class="name">{{ register_form.Name.label_tag }}</label>
+            {{ register_form.Name }}
+            <label class="nationality">{{ register_form.Nationality.label_tag }}</label>
+            {{ register_form.Nationality }}
+            <label class="email">{{ register_form.Email.label_tag }}</label>
+            {{ register_form.Email }}
+            <label class="wallet">{{ register_form.Wallet.label_tag }}</label>
+            {{ register_form.Wallet }}
+            <label class="password1">{{ register_form.password1.label_tag }}</label>
+            {{ register_form.password1 }}
+            <label class="password2">{{ register_form.password2.label_tag }}</label>
+            {{ register_form.password2 }}
+
+{#            <label class="label">{{ login_form.useremail.label_tag }}</label>#}
+{#            <div class="input">#}
+{#                {{ login_form.useremail }}#}
+{#            </div>#}
+{#            <label class="label">{{ login_form.useremail.label_tag }}</label>#}
+{#            <div class="input">#}
+{#                {{ login_form.useremail }}#}
+{#            </div>#}
+{#            <label class="label">{{ login_form.useremail.label_tag }}</label>#}
+{#            <div class="input">#}
+{#                {{ login_form.useremail }}#}
+{#            </div>#}
+{#            <label class="label">{{ login_form.useremail.label_tag }}</label>#}
+{#            <div class="input">#}
+{#                {{ login_form.password }}#}
+{#            </div>#}
+            <button type="submit" class="register">Register</button>
+        </form>
+        <p class="account"> You Have an account?</p>
+        <form action="/login/">
+        <button class="login">Login</button>
+        </form>
+        <button class="forget">Forget password</button>
+
+
+
+
+</body>
+</html>
